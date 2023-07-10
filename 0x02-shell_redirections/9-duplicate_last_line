@@ -1,2 +1,2 @@
 #!/bin/bash
-sort trail -n 1 iacta >> iacta
+sort trail -n 1 < iacta >> iacta
