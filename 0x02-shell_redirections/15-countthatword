@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "bin" /etc/passwd | uniq -ui
+grep "bin" /etc/passwd | uniq -uic
