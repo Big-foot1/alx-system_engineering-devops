@@ -1,2 +1,2 @@
 #!/bin/bash
-trail -n 1 iacta >> iacta
+trail -n 1 < iacta >> iacta
