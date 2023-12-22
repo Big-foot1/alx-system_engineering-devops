@@ -1,0 +1,1 @@
+ssh, loops and conditions
