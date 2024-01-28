@@ -1,0 +1,21 @@
+https://drive.google.com/file/d/1g_kLDm1oLicN9uOK_xviNm-J0ypXBhWe/view?usp=drive_link
+Adding Another Server: We've introduced an additional server for each component (Web server, Application server, and Database server). This setup minimizes the risk of a Single Point of Failure (SPOF). Both servers run simultaneously, ensuring uninterrupted service even if one server encounters issues.
+Load Balancer: The Load Balancer acts as a traffic cop, distributing incoming requests among multiple servers. Its role is to optimize resource utilization, improve responsiveness, and enhance overall performance and availability.
+LOAD BALANCER
+The Load Balancer serves as the intermediary between clients and servers. It receives HTTP requests and redirects them to the appropriate server. Load balancers analyze incoming requests and determine distribution methods based on factors such as server load, health, or algorithms.
+For this case, we use HAProxy load Balancer which is a software load balancer. This is because it can proxy both TCP and HTTP applications. It's also free, fast and reliable load balance with reverse-proxy and high availability.
+We will then configure a Round Robin and/or Least Connection algorithm to distribute the received packets.
+Round Robin: Distributes traffic evenly in a circular fashion, ensuring relatively equal distribution.
+Least Connections: Redirects HTTP requests to the server with the fewest connections.
+
+PRIMARY-REPLICA DATABASES
+Also known as a master-slave database cluster, this setup aims for high availability and fault tolerance in database systems.
+The primary database handles all operations (CRUD), while the replica is read-only.
+The primary server maintains a log (Binary log) of changes and communicates with replica servers to keep them updated.
+Replica servers receive updates from the primary server and apply changes for synchronization, potentially located in different locations to enhance user experience.
+ISSUES
+Here are potential Single Points of Failure (SPOFs) and security risks that this infrastructure may face:
+FIREWALL: Security devices that monitor traffic based on predetermined security rules. In this infrastructure, two firewalls are essential: one between the client and the ISP (client-side firewall) and one between the ISP and the server (network firewall).
+HTTPS: HyperText Transfer Protocol Secure, a protocol that applies encryption to secure data exchange between the user's browser and the web server, ensuring confidentiality.
+MONITORING: Real-time tracking of the system's health, performance, and security is vital to address potential issues promptly.
+
