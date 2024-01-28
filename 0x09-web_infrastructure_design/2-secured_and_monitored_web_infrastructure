@@ -1,0 +1,28 @@
+https://drive.google.com/file/d/1xB-opw9Jf1NYwkw-r8wJBCN4GGB3i_1h/view?usp=drive_link
+In this three-server web infrastructure hosting www.foobar.com, security, encryption, and monitoring are paramount. We've implemented the following enhancements:
+3 Firewalls: These firewalls bolster security by ensuring a client's request for information from a server undergoes rigorous scrutiny.
+1 SSL Certificate: To serve www.foobar.com Over HTTPS, Secure Sockets Layer (SSL) ensures the encryption of data transmitted between users and the server, providing data integrity and authentication.
+3 Monitoring Clients: Monitoring is essential for tracking resource performance, including servers, applications, and databases. It monitors CPU and memory usage, response times, storage availability, hardware health, and system logs to identify security risks and ensure a positive user experience.
+SSL (Secure Sockets Layer)
+SSL is a protocol that facilitates secure communication over a computer network. It provides encryption, data integrity, and authentication, safeguarding data transmitted between users and servers.
+SERVING OVER HTTPS
+Serving over HTTPS is crucial for several reasons related to security, including data encryption, data integrity, and user privacy.
+MONITORING
+Monitoring involves tracking resource performance, system health, and security. It ensures resources are available, and operational, and provides quick alerts in case of issues. Monitoring also identifies security threats by analyzing system logs and patterns.
+REAL-LIFE MONITORING
+
+In practice, various tools and components like Nagios and Zabbix are used to collect data from different components of an IT infrastructure. Larger IT environments often use a centralized monitoring server as a control center for analysis and alerting.
+
+QUERY PER SECOND (QPS)
+QPS measures the rate at which queries or requests are made to a system per second.
+
+MONITORING THE QPS OF A WEB-SERVER
+Monitoring the QPS of a web server helps gauge its capacity to handle HTTP requests per second, providing insights into performance and resource utilization. Tools like Nagios and Zabbix can monitor QPS.
+
+ISSUES
+Here are potential Single Points of Failure (SPOFs) and security risks that this infrastructure may face:
+FIREWALL: These provide security before intrusion and offer no security if the intruder penetrates the network. Therefore there is a need to provide security if the intruder penetrates the network. Here we deploy a zero trust Architectures like two-factor authentication for users.
+REDUNDANCY:  We have only one server that accepts writes, In case of overwhelming write requests the server may slow down. Therefore there is a need to create backup storage servers, power supplies, and other components that can not easily be replaced in case of fault.
+NETWORK PROTOCOL: We also need to use network protocols that minimize SPOF, like Open shortest path first, shortest path bridging or intermediate system to intermediate system.
+
+
