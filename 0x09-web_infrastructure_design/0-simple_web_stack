@@ -1,0 +1,22 @@
+https://drive.google.com/file/d/1RbJD1k0ZNO1zOKce5v7ZUVSV3_r0g4F9/view?usp=drive_link
+In this one-server web infrastructure, we host a website accessible via www.foobar.com. The diagram illustrates the components of the server and the communication between the server and a client requesting foobar.com
+EVENTS
+REQUEST: The user enters a memorable URL and submits it from their favorite browser.
+DNS RESOLUTION: The computer sends a DNS request to convert the human-readable URL to the website's actual IP address.
+TCP CONNECTION: The computer establishes a Transmission Control Protocol (TCP) connection with the web server.
+HTTP REQUEST: The computer is ready to send an HTTP request to the web server.
+PROCESSING: The web server processes the HTTP request, generating the requested data. This data can be fetched from the database by the application server or accessed from the codebase.
+HTTP RESPONSE: The data is prepared to be transmitted back to the user.
+RENDERING: The browser displays the information received from the server.
+INTERACTION: The user can interact with the content and trigger events within it.
+ISSUES
+SINGLE POINT OF FAILURE (SPOF)
+A Single Point of Failure is a situation where a system relies on a single factor, and if that factor fails, the entire system can crash. In this structure, there are several SPOFs to consider
+POWER SUPPLY: If the power supply relies on a single source, an outage can disrupt the entire system.
+ISP SPOF: If the connection from the Internet Service Provider (ISP) stops, the connection between the computer and the server will cease.
+CAPACITY OVERFLOW: With only one server receiving requests, it may become overwhelmed and unable to handle the load during traffic spikes.
+DNS SPOOFING ATTACK: This consists of manipulating the Domain Name System (DNS) to redirect users to a malicious website. This not only poses a security threat but also creates a communication SPOF.
+DOWNTIME: Deploying new code or performing server maintenance, including software updates, hardware maintenance, database maintenance, or configuration changes, may lead to service interruptions.
+SCALING TRAFFIC: The potential for a sudden surge in traffic can disrupt service since there's only one server to handle requests.
+A robust infrastructure design addresses these SPOFs to ensure reliable and uninterrupted service.
+
