@@ -1,0 +1,6 @@
+https://drive.google.com/file/d/1CvqgU-qd3vtD0C8lqCgawx1cEvOWpPoZ/view?usp=drive_link
+Configuring HAProxy (High Availability Proxy) as a cluster typically refers to setting up multiple HAProxy instances in a clustered or load-balanced configuration to achieve high availability and distribute incoming traffic efficiently. This setup ensures that if one HAProxy node fails, another can take over to prevent downtime and maintain a reliable service.
+
+Health Checking: HAProxy continuously monitors the health of backend servers. In a clustered setup, health checks become even more critical. If a server is deemed unhealthy, the load balancer can automatically redirect traffic to healthy servers, preventing users from being directed to a failing or overloaded server.
+
+Scalability: Clustering also allows for scalability. As the demand for services grows, additional HAProxy nodes can be added to the cluster to handle increased traffic.
